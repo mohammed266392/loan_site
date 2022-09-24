@@ -1,0 +1,203 @@
+:root {
+    --bg-color-bleu: #214a82;
+    --color-with-bleu:white;
+
+
+    --bg-color-jaune: #fce746;
+    --color-with-jaune:rgb(0, 0, 0);
+
+  }
+
+.menu-burger-nav{
+    position: fixed;
+    transform: translate(50%, -50%);
+    right: -20%;
+    top: 50%;
+    display: block;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+  } 
+  
+  .menu-burger-nav.menu-burger-nav-active{
+    right: 50%;
+  }
+  .menu-burger-nav.menu-burger-nav-active.dropdown-2{
+    right: 80%;
+  }
+  .grossir{
+    font-size: 1.2em;
+    opacity: 50%;
+  }
+  .maigrir{
+    font-size: 0.9em;
+    opacity: 50%;
+  }
+  
+  
+  .menu-burger-nav_menu-content{
+    display: none;
+  }
+  
+  .menu-burger-nav_menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-burger-nav_menu_li{
+    transition: all 0.3s ease-out;
+  }
+  .menu-burger-nav_menu_li_link {
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .menu-burger-nav_menu-content{
+    /* display: none; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    top: 56%;
+    right: -30%;
+    /* color: green; */
+    color: transparent;
+    /* right: 20%; */
+    transform: translate(50%, -50%);
+    transition: all 0.3s ease-out;
+  }
+  
+  .menu-burger-nav.menu-burger-nav-active.dropdown-2 .menu-burger-nav_menu-content{
+    color: rgb(255, 255, 255);
+  } 
+  
+  .menu-burger-nav_menu-content-onglet{
+    padding: 10px;
+    white-space: nowrap;
+  }
+  .menu-burger-nav_menu-content-onglet:hover{
+    font-size: 1.2em;
+  }
+  
+  .nav{
+      display: none;
+      font-size: x-large;
+  }
+  .header{
+      /* background-color: #244981; */
+      padding: 11px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .logo{
+      display: flex;
+      width: 100px;
+  }
+  .header-logo{
+      width: 100%;
+      border-radius: 15px;
+  }
+  .menu-burger{
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      background-color: var(--color-with-bleu);
+      position: relative;
+      /* opacity: 0.7; */
+      border-radius: 15px;
+  }
+  .conteneur{
+      position: relative;
+  }
+  .conteneur_menu-burger_content{
+      position: fixed;
+      left: 100%;
+      height: 100vh;
+      width: 100vw;
+      background-color: #000000d6;
+      z-index: 1;
+      transition: all 0.5s ease-in-out;
+  }
+  .conteneur_menu-burger_content.active{
+      
+      left: 0%;
+  }
+  
+  .menu-burger-z-index{
+      z-index: 1;
+      /* color: var(--bg-color-jaune); */
+  }
+  
+  .menu-burger_bar-millieu{
+      display: block;
+      width: 80%;
+      height: 4px;
+      background-color: var(--bg-color-bleu);
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%); 
+      /* transition: background-color 1s  */
+  }
+  
+  .menu-burger_bar-millieu::before, .menu-burger_bar-millieu::after{
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: var(--bg-color-bleu);
+      position: absolute;
+      transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+  }
+  
+  .menu-burger_bar-millieu::before{
+  
+      transform: translateY(-10px);
+  }
+  .menu-burger_bar-millieu::after{
+  
+      transform: translateY(10px);
+  }
+  
+  .menu-burger.active .menu-burger_bar-millieu{
+      background-color: transparent;
+  }
+  
+  .menu-burger.active .menu-burger_bar-millieu::before{
+      transform: translateY(0px) rotate(-45deg);
+  }
+  
+  .menu-burger.active .menu-burger_bar-millieu::after{
+      transform: translateY(0px) rotate(45deg);
+  }
+  
+  
+  .main{
+      position: relative;
+  }
+  .main_video{
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+  }
+  
+  .main_title {
+      /* position: absolute; */
+      color: var(--color-with-bleu);
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      text-transform: uppercase;
+      transform: translate(50%, -50%);
+      text-align: center;
+  }
+
