@@ -620,7 +620,7 @@ body {
 .image_block4_fenetre3{
   background-image: url("/images/fenetre3.png");
   position: absolute;
-  top: 67%;
+  bottom: -45%;
   right: -19%;
     width: 232px;
     height: 246px;
@@ -647,8 +647,36 @@ body {
 }
 .main2_block4_details{
   background-color: #214a82;
-  height: 500px;
+  height: 900px;
   margin-top: 214px;
 }
+.main2_block4_details_mission{
+  padding-top: 29%;
+  margin: auto;
+  width: 250px;
+}
+.main2_block4_details_mission_p1{
+  font-weight: bolder;
+  color: rgb(191, 0, 0);
+  margin: 5px;
 
+}
+
+.main2_block4_details_mission_p2{
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+
+}
+.main2_block4_details_mission_p3{
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+
+}
+
+.main2_block4_details_mission_p3{
+  margin-bottom: 40px;
+}
+.main2_block4_details_mission_p4{
+  text-align: center;
+}
 }
