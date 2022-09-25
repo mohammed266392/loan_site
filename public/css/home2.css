@@ -215,7 +215,7 @@ body {
   
 
 
-@media only screen and (min-width: 955px) and (max-width: 14000px) {
+@media only screen and (min-width: 945px) and (max-width: 14000px) {
 
 
  
@@ -647,7 +647,7 @@ body {
 }
 .main2_block4_details{
   background-color: #214a82;
-  height: 900px;
+  height: 1000px;
   margin-top: 214px;
 }
 .main2_block4_details_mission{
@@ -679,4 +679,63 @@ body {
 .main2_block4_details_mission_p4{
   text-align: center;
 }
+
+.main2_block4_avis{
+  height: 500px;
+  position: relative;
+
+}
+.main2_block4_avis_title{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main2_block4_avis_box{
+  border: 2px solid red;
+  width: 43%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.main2_block4_avis_box_block{
+  
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  
+}
+.main2_block4_avis_box_block_personne, .main2_block4_avis_box_block_texte, .main2_block4_avis_box_block_etoile{
+  text-align: center;
+}
+.fleche_droite_avis{
+  transform: rotateZ(90deg);
+  width: 40px;
+    height: 40px;
+  position: absolute;
+  top: 43%;
+  right: 25%;
+}
+.fleche_gauche_avis{
+  transform: rotateZ(270deg);
+  width: 40px;
+    height: 40px;
+  position: absolute;
+  top: 43%;
+  left: 25%;
+}
+/* 
+
+main2_block4_avis_box_block
+main2_block4_avis_box_block_personne
+main2_block4_avis_box_block_texte
+main2_block4_avis_box_block_etoile */
+
+
 }

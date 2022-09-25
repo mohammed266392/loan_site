@@ -5,6 +5,47 @@ const btn = document.querySelector('.menu-burger');
 const btnNavBurger = document.querySelector('.menu-burger-nav');
 const btnDropDownMenuBurger = document.querySelector('.menu-burger-nav_menu_li-dropdown-2');
 const btnPlusIcon = document.querySelectorAll('.sous_icon_plus');
+const avisTab = document.querySelectorAll('.main2_block4_avis_box_block');
+const flecheDroit = document.querySelector('.fleche_droite_avis');
+const flecheGauche = document.querySelector('.fleche_gauche_avis');
+
+
+let leftAvis = "50";
+
+for (const avis of avisTab) {
+    avis.style.left = leftAvis+"%";
+    avis.style.transform = "translate(-50%, -50%)";
+    avis.style.transition = "all 0.5s ease-in-out"
+    leftAvis = String(Number(leftAvis)+100);
+    
+}
+
+
+const slideAdroite = () =>{
+    let blockAvis = document.querySelectorAll('.main2_block4_avis_box_block');
+    blockAvis.forEach(element => {
+        let decallage = element.style.left.split('%')[0];
+        decallage = Number(decallage)-100;
+        element.style.left = decallage+"%";
+        
+    });
+}
+const slideAGauche = () =>{
+    let blockAvis = document.querySelectorAll('.main2_block4_avis_box_block');
+    blockAvis.forEach(element => {
+        let decallage = element.style.left.split('%')[0];
+        decallage = Number(decallage)+100;
+        element.style.left = decallage+"%";
+        
+    });
+}
+
+flecheDroit.addEventListener('click',() =>{
+    slideAdroite();
+});
+flecheGauche.addEventListener('click',() =>{
+    slideAGauche();
+});
 
 
 btn.addEventListener('click',()=>{
